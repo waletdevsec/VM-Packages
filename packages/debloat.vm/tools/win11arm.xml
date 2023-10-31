@@ -9,6 +9,9 @@
         FORMAT:
         <app name="APP_NAME"/>
         -->
+        <!--Win11-->
+        <app name="MicrosoftTeams"/>
+        <app name="MicrosoftWindows.Client.WebExperience"/>
     </apps>
     <services>
         <!--
@@ -107,6 +110,8 @@
         <registry-item name="Remove Bing Desktop Search Bar" path="HKLM:\SOFTWARE\Policies\Microsoft\Edge" value="WebWidgetAllowed" type="DWord" data="0" />
         <registry-item name="Disable Windows Update Automatic Download" path="HKLM:\SOFTWARE\Policies\Microsoft\Windows\WindowsUpdate\AU" value="AUOptions" type="DWord" data="2" />
         <registry-item name="Disable Windows Update Automatic Restart" path="HKLM:\SOFTWARE\Microsoft\Windows NT\CurrentVersion\Image File Execution Options\MusNotification.exe" value="Debugger" type="String" data="cmd.exe" />
+        <!-- WIN 11 -->
+        <registry-item name="Remove Teams Chat Icon" path="HKCU:\Software\Microsoft\Windows\CurrentVersion\Explorer\Advanced" value="TaskbarMn" type="DWord" data="0" />
     </registry-items>
     <path-items>
         <!--

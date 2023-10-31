@@ -1,12 +1,12 @@
 <?xml version="1.0" encoding="utf-8"?>
-<config> 
+<config>
     <apps>
         <!--
         INFO:
         Removes installed AppX packages. Try:
         $packages = Get-AppxPackage
         $packages.Name
-        FORMAT: 
+        FORMAT:
         <app name="APP_NAME"/>
         -->
         <app name="Microsoft.549981C3F5F10"/>
@@ -50,7 +50,7 @@
         Sets Services to "Manual" startup type. Try:
         $services = Get-WmiObject -Query "SELECT * FROM Win32_Service WHERE StartMode='Auto'" | Get-Service
         $services.Name
-        FORMAT: 
+        FORMAT:
         <service name="SERVICE_NAME"/>
         -->
         <service name="XboxGipSvc"/>
@@ -80,8 +80,8 @@
         Disables Scheduled Tasks. Try:
         $tasks = Get-ScheduledTask
         $tasks.TaskName
-        FORMAT: 
-        <task name="DESCRIPTIVE_NAME" value="TASK_NAME"/> 
+        FORMAT:
+        <task name="DESCRIPTIVE_NAME" value="TASK_NAME"/>
         -->
         <task name="Microsoft Compatibility Appraiser" value="Microsoft\Windows\Application Experience\Microsoft Compatibility Appraiser"/>
         <task name="ProgramDataUpdater" value="Microsoft\Windows\Application Experience\ProgramDataUpdater"/>
@@ -94,7 +94,7 @@
         <!--
         INFO:
         Makes custom edits to the registry
-        FORMAT: 
+        FORMAT:
         <registry-item name="DESCRIPTIVE_NAME" path="REG_PATH" value="REG_VALUE" type="TYPE" data="NEW_DATA"/> 
         -->
         <registry-item name="Enable Fast Startup" path="HKLM:\SYSTEM\CurrentControlSet\Control\Session Manager\Power" value="HiberbootEnabled" type="DWord" data="1"/>
@@ -146,7 +146,7 @@
         <!--
         INFO:
         Removes files and folders from the system
-        FORMAT: 
+        FORMAT:
         <path-item name="DESCRIPTIVE_NAME" type="dir/file" path="DIR_PATH/FILE_PATH"/>
         -->
     </path-items>
@@ -154,7 +154,7 @@
         <!--
         INFO:
         Performs custom commands
-        FORMAT: 
+        FORMAT:
         <custom-item name="DESCRIPTIVE_NAME"> <cmd value="PS_COMMAND"/> ... </custom-item>
         -->
         <custom-item name="Remove OneDrive">
